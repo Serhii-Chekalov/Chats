@@ -8,18 +8,21 @@ import {
   List,
   ListItem,
   HeaderWrap,
+  InfoUser,
+  Name,
+  Message,
 } from "./SidebarView.styled";
 
 export const SidebarView = ({ chats = [], onChatChange, onSearch } = {}) => {
   return (
     <div>
-    <HeaderWrap>
-      <Header>Search chat</Header>
-      <Input
-        onChange={(e) => onSearch(e.target.value)}
-        placeholder="Serch or start new chat"
-        type="text"
-      />
+      <HeaderWrap>
+        <Header>Search chat</Header>
+        <Input
+          onChange={(e) => onSearch(e.target.value)}
+          placeholder="Serch or start new chat"
+          type="text"
+        />
       </HeaderWrap>
       <Head>Chats</Head>
       <List>
@@ -27,9 +30,11 @@ export const SidebarView = ({ chats = [], onChatChange, onSearch } = {}) => {
           return (
             <ListItem key={id}>
               <Button onClick={() => onChatChange(id)}>
-                <Image src={avatar} alt="" />
-                <span>{user}</span>
-                <p>{message}</p>
+                {/* <Image src={avatar} alt="" /> */}
+                <InfoUser>
+                  <Name>{user}</Name>
+                  <Message>{message}</Message>
+                </InfoUser>
               </Button>
             </ListItem>
           );

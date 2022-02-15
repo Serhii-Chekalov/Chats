@@ -1,6 +1,5 @@
 import styled from "@emotion/styled";
 
-
 export const HeaderWrap = styled.div`
   background-color: #f6f6f4;
   border: 1px solid #c0c0c0;
@@ -9,16 +8,39 @@ export const HeaderWrap = styled.div`
 
 export const Head = styled.h3`
   display: block;
-  color: #4682B4;
-  margin-left: 25px;
-  margin-top: 30px;
+  color: #4682b4;
+  margin: 30px 0px 0px 25px;
 `;
 
-export const Image = styled.img`
-  display: block;
-  color: #0000ff;
-  margin-left: 20px;
-  margin-top: 30px;
+// export const Image = styled.img`
+//   border-radius: 50%;
+//   margin-left: 20px;
+//   margin-right: 8px;
+//   position: relative;
+//   top: 0px;
+//   right: 10px;
+//   left: 0px;
+// `;
+
+export const InfoUser = styled.div`
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 12px;
+`;
+
+export const Name = styled.h2`
+  margin: 0;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 12px;
+`;
+
+export const Message = styled.h3`
+  margin: 0;
+  font-size: 12px;
+  color: #7e818a;
+  margin-top: 12px;
+  font-weight: normal;
 `;
 
 export const Header = styled.div`
@@ -41,7 +63,9 @@ export const Input = styled.input`
 `;
 
 export const List = styled.ul`
-  padding: 20px;
+  margin-top: 50px;
+  overflow-y: scroll;
+  height: 500px;
 `;
 
 export const ListItem = styled.li`
@@ -53,11 +77,11 @@ export const Button = styled.button`
   cursor: pointer;
   width: 100%;
   display: block;
-  padding: 20px;
+  padding: 10px;
   font-size: 12px;
   background-color: #fff;
-  border-bottom: 1px solid #f00;
-  border-radius: 5px;
+  border: 0;
+  border-bottom: 1px solid #c0c0c0;
 
   &:hover {
     background-color: #eee;
