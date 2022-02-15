@@ -1,12 +1,12 @@
 import { useState, useEffect, useMemo } from "react";
+import { List, Input, MessageItem, MessageWrap } from "./ChatView.styled";
 
-export const ChatView = ({ active, messages = [], onMessageCreate } = {}) => {
+export const ChatView = ({
+  activeChat,
+  messages = [],
+  onMessageCreate,
+} = {}) => {
   const [message, setMessage] = useState("");
-
-  const currectMessages = useMemo(
-    () => messages[active] ?? [],
-    [active, messages]
-  );
 
   const handleKeyDown = (event) => {
     if (!message) return;
@@ -19,17 +19,20 @@ export const ChatView = ({ active, messages = [], onMessageCreate } = {}) => {
 
   return (
     <>
-      <ul style={{ padding: "0px 40px" }}>
-        {currectMessages.map(({ creator, user }, index) => {
+      {/* <pre>{JSON.stringify(activeChat, null, 2)}</pre> */}
+      <div>{activeChat.creator}</div>
+      <List>
+        {messages.map(({ creator, user }, index) => {
           return (
-            <li key={index} style={{ textAlign: creator ?? "right" }}>
-              <p>{creator || user}</p>
-            </li>
+            <MessageWrap key={index} right={Boolean(user)}>
+              <MessageItem>{creator || user}</MessageItem>
+            </MessageWrap>
           );
         })}
-      </ul>
+      </List>
       <div>
-        <input
+        <Input
+          placeholder="Type your message"
           type="text"
           value={message}
           onChange={(e) => setMessage(e.target.value)}

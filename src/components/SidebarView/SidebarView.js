@@ -1,24 +1,28 @@
 import { useState, useEffect } from "react";
-
-import { Head } from "./SidebarView.styled";
+import { Header, Head, Button, List, ListItem } from "./SidebarView.styled";
 
 // chat -> ID, creator, user
 // messages -> ID []<messages>
 
-export const SidebarView = ({ chats = [], onChatChange } = {}) => {
+export const SidebarView = ({ chats = [], onChatChange, onSearch } = {}) => {
   return (
     <div>
-      <header>Header</header>
+      <Header>Header</Header>
+
+      <input onChange={(e) => onSearch(e.target.value)} type="text" />
       <Head>Chats</Head>
-      <ul>
-        {chats.map(({ id, creator, user }) => {
+      <List>
+        {chats.map(({ id, creator, user, message }) => {
           return (
-            <li key={id}>
-              <button onClick={() => onChatChange(id)}>{user}</button>
-            </li>
+            <ListItem key={id}>
+              <Button onClick={() => onChatChange(id)}>
+                <span>{user}</span>
+                <p>{message}</p>
+              </Button>
+            </ListItem>
           );
         })}
-      </ul>
+      </List>
     </div>
   );
 };
