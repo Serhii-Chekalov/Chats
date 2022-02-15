@@ -1,5 +1,11 @@
 import styled from "@emotion/styled";
 
+export const NameWrap = styled.div`
+  background-color: #f6f6f4;
+  border: 1px solid #c0c0c0;
+  height: 60px;
+`;
+
 export const Name = styled.div`
   padding: 10px;
   margin-top: 10px;
@@ -7,12 +13,25 @@ export const Name = styled.div`
   color: #4682b4;
 `;
 
-export const Input = styled.input`
+export const ChatWrap = styled.div`
+  background-color: #fcfbfa;
+  border: 1px solid #c0c0c0;
   padding: 10px;
-  margin-top: 10px;
-  margin-bottom: 15px;
+  overflow-y: scroll;
+  height: 500px;
+`;
+
+export const InputWrap = styled.div`
+  background-color: #f6f6f4;
+  border: 1px solid #c0c0c0;
+  width: 100%;
+  padding: 40px;
+`;
+
+export const Input = styled.input`
+  padding: 20px;
   border-radius: 30px;
-  width: 70vh;
+  width: 100vh;
 `;
 
 export const List = styled.ul`
@@ -24,7 +43,8 @@ export const MessageItem = styled.span`
   display: inline-block;
   padding: 10px 20px;
   border-radius: 20px;
-  background-color: #eee;
+  background-color: #2f4f4f;
+  color: #ffffff;
   max-width: 80%;
 `;
 
@@ -38,18 +58,8 @@ export const MessageWrap = styled.li`
     text-align: right;
 
     span {
-      color: white;
-      background-color: black;
+      background-color:  #eee;
+      color: #000000;
     }
   `}
-`;
-
-export const MessagesCreator = styled.div`
-  padding: 20px;
-  color: green;
-  line-height: 25px;
-  max-width: 90%;
-
-  text-align: right;
-  border-radius: 5px;
 `;

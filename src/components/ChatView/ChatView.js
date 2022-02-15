@@ -1,5 +1,14 @@
 import { useState, useEffect, useMemo } from "react";
-import { Name, List, Input, MessageItem, MessageWrap } from "./ChatView.styled";
+import {
+  Name,
+  List,
+  Input,
+  MessageItem,
+  MessageWrap,
+  ChatWrap,
+  NameWrap,
+  InputWrap,
+} from "./ChatView.styled";
 
 export const ChatView = ({
   activeChat,
@@ -19,17 +28,21 @@ export const ChatView = ({
 
   return (
     <>
-      <Name>{activeChat.creator}</Name>
-      <List>
-        {messages.map(({ creator, user }, index) => {
-          return (
-            <MessageWrap key={index} right={Boolean(user)}>
-              <MessageItem>{creator || user}</MessageItem>
-            </MessageWrap>
-          );
-        })}
-      </List>
-      <div>
+      <NameWrap>
+        <Name>{activeChat.user}</Name>
+      </NameWrap>
+      <ChatWrap>
+        <List>
+          {messages.map(({ creator, user }, index) => {
+            return (
+              <MessageWrap key={index} right={Boolean(user)}>
+                <MessageItem>{creator || user}</MessageItem>
+              </MessageWrap>
+            );
+          })}
+        </List>
+      </ChatWrap>
+      <InputWrap>
         <Input
           placeholder="Type your message"
           type="text"
@@ -37,7 +50,7 @@ export const ChatView = ({
           onChange={(e) => setMessage(e.target.value)}
           onKeyDown={handleKeyDown}
         />
-      </div>
+      </InputWrap>
     </>
   );
 };

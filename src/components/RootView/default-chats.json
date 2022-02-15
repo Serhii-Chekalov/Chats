@@ -2,16 +2,19 @@
   {
     "id": 1,
     "creator": "Sergii Chekalov",
-    "user": "Dmytro"
+    "user": "Dmytro",
+    "avatar":"https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_08.jpg"
   },
   {
     "id": 2,
     "creator": "Sergii Chekalov",
-    "user": "Alina"
+    "user": "Alina",
+    "avatar":"https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_08.jpg"
   },
   {
     "id": 3,
     "creator": "Sergii Chekalov",
-    "user": "Solomiya"
+    "user": "Solomiya",
+    "avatar":"https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_08.jpg"
   }
 ]
