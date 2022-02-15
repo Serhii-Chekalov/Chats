@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo } from "react";
-import { List, Input, MessageItem, MessageWrap } from "./ChatView.styled";
+import { Name, List, Input, MessageItem, MessageWrap } from "./ChatView.styled";
 
 export const ChatView = ({
   activeChat,
@@ -19,8 +19,7 @@ export const ChatView = ({
 
   return (
     <>
-      {/* <pre>{JSON.stringify(activeChat, null, 2)}</pre> */}
-      <div>{activeChat.creator}</div>
+      <Name>{activeChat.creator}</Name>
       <List>
         {messages.map(({ creator, user }, index) => {
           return (

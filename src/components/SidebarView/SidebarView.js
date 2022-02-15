@@ -1,15 +1,23 @@
 import { useState, useEffect } from "react";
-import { Header, Head, Button, List, ListItem } from "./SidebarView.styled";
-
-// chat -> ID, creator, user
-// messages -> ID []<messages>
+import {
+  Header,
+  Input,
+  Head,
+  Button,
+  List,
+  ListItem,
+} from "./SidebarView.styled";
 
 export const SidebarView = ({ chats = [], onChatChange, onSearch } = {}) => {
   return (
     <div>
-      <Header>Header</Header>
+      <Header>Search chat</Header>
 
-      <input onChange={(e) => onSearch(e.target.value)} type="text" />
+      <Input
+        onChange={(e) => onSearch(e.target.value)}
+        placeholder="Serch or start new chat"
+        type="text"
+      />
       <Head>Chats</Head>
       <List>
         {chats.map(({ id, creator, user, message }) => {

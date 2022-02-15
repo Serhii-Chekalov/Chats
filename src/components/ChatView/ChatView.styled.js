@@ -1,5 +1,12 @@
 import styled from "@emotion/styled";
 
+export const Name = styled.div`
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #4682b4;
+`;
+
 export const Input = styled.input`
   padding: 10px;
   margin-top: 10px;
