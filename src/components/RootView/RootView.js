@@ -76,7 +76,7 @@ export const RootView = () => {
     setTimeout(
       setFakeData,
       // set any renage, that u want 10 -> 15
-      (Math.floor(Math.random() * 15) + 10) * 1000
+      (Math.floor(Math.random() * 5) + 3) * 1000
     );
   };
 
