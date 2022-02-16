@@ -18,7 +18,7 @@ export const ChatWrap = styled.div`
   border: 1px solid #c0c0c0;
   padding: 10px;
   overflow-y: scroll;
-  height: 500px;
+  height: calc(100vh - 220px);
 `;
 
 export const InputWrap = styled.div`

@@ -1,20 +1,17 @@
 [
   {
     "id": 1,
-    "creator": "Sergii Chekalov",
-    "user": "Dmytro",
-    "avatar":"https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_08.jpg"
+    "creator": "Sergii",
+    "user": "Dmytro"
   },
   {
     "id": 2,
-    "creator": "Sergii Chekalov",
-    "user": "Alina",
-    "avatar":"https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_08.jpg"
+    "creator": "Sergii",
+    "user": "Alina"
   },
   {
     "id": 3,
-    "creator": "Sergii Chekalov",
-    "user": "Solomiya",
-    "avatar":"https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_08.jpg"
+    "creator": "Sergii",
+    "user": "Solomiya"
   }
 ]

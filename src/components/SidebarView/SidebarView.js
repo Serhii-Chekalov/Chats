@@ -1,14 +1,12 @@
 import { useState, useEffect } from "react";
 import {
   Header,
-  Image,
   Input,
   Head,
   Button,
   List,
   ListItem,
   HeaderWrap,
-  InfoUser,
   Name,
   Message,
 } from "./SidebarView.styled";
@@ -17,7 +15,7 @@ export const SidebarView = ({ chats = [], onChatChange, onSearch } = {}) => {
   return (
     <div>
       <HeaderWrap>
-        <Header>Search chat</Header>
+        <Header>Sergii</Header>;
         <Input
           onChange={(e) => onSearch(e.target.value)}
           placeholder="Serch or start new chat"
@@ -26,15 +24,12 @@ export const SidebarView = ({ chats = [], onChatChange, onSearch } = {}) => {
       </HeaderWrap>
       <Head>Chats</Head>
       <List>
-        {chats.map(({ id, creator, user, message, avatar }) => {
+        {chats.map(({ id, user, message }) => {
           return (
             <ListItem key={id}>
               <Button onClick={() => onChatChange(id)}>
-                {/* <Image src={avatar} alt="" /> */}
-                <InfoUser>
-                  <Name>{user}</Name>
-                  <Message>{message}</Message>
-                </InfoUser>
+                <Name>{user}</Name>
+                <Message>{message}</Message>
               </Button>
             </ListItem>
           );

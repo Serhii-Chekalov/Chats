@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 export const HeaderWrap = styled.div`
   background-color: #f6f6f4;
   border: 1px solid #c0c0c0;
-  height: 120px;
+  height: calc(100vh - 600px);
 `;
 
 export const Head = styled.h3`
@@ -12,27 +12,10 @@ export const Head = styled.h3`
   margin: 30px 0px 0px 25px;
 `;
 
-// export const Image = styled.img`
-//   border-radius: 50%;
-//   margin-left: 20px;
-//   margin-right: 8px;
-//   position: relative;
-//   top: 0px;
-//   right: 10px;
-//   left: 0px;
-// `;
-
-export const InfoUser = styled.div`
-  display: inline-block;
-  vertical-align: top;
-  margin-top: 12px;
-`;
-
 export const Name = styled.h2`
   margin: 0;
   display: inline-block;
   vertical-align: top;
-  margin-top: 12px;
 `;
 
 export const Message = styled.h3`
@@ -46,7 +29,7 @@ export const Message = styled.h3`
 export const Header = styled.div`
   margin-top: 20px;
   display: block;
-  text-align: center;
+  margin-left: 25px;
 `;
 
 export const Input = styled.input`
@@ -63,13 +46,12 @@ export const Input = styled.input`
 `;
 
 export const List = styled.ul`
-  margin-top: 50px;
   overflow-y: scroll;
-  height: 500px;
+  height: calc(100vh - 220px);
+  margin-top: 30px;
 `;
 
 export const ListItem = styled.li`
-  margin-top: 10px;
   font-size: 16px;
 `;
 
